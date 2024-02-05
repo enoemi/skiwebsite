@@ -1,0 +1,445 @@
+/*ÁLTALÁNOS*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(Kepek/hatter.jpg);
+    background-repeat: no-repeat;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: lighten;
+    background-color: rgb(100, 187, 241);
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.3em;
+    color: black;
+}
+
+html{
+    padding: 0px;
+    margin: 0px;
+}    
+
+@font-face {
+    font-family: 'headerFont';
+    src: url('betutipus/Snowinter-Free-For-Personal-Use.otf');}
+
+@font-face {
+    font-family: 'kisheader';
+    src: url('betutipus/Snowtop\ Caps.ttf')
+}
+
+@font-face {
+    font-family: 'bekezdések';
+    src: url('betutipus/Lato-Regular.ttf');
+}
+
+
+
+
+/*.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.container>* {
+    margin: 1%;
+    height: fit-content;
+}*/
+
+/*TAGEK*/
+
+div container{
+    display: flex;
+	flex-direction: column;
+}
+
+div.szekcio {
+    width: 100%;
+    border: 2px solid white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    align-content: stretch;
+    
+}
+
+article#images1 {
+    width: 70%;
+    text-align: center;
+    padding-right: 0px;
+}
+
+header h1 {
+    font-family: 'kisheader';
+    padding: 0.7em;
+    margin: 0px;
+    text-align: center;
+    font-size: 2em;
+}
+
+header h2 {
+    font-family: 'kisheader';
+    text-align: center;
+    font-size: 1.2em;
+    padding: 0px;
+}
+
+h2{
+    font-family: 'kisheader';
+    font-size: 40px;
+    text-align: center;
+}
+h3.cikkcim {
+    font-family: 'kisheader';
+    font-size: 30px;
+}
+h3{
+    font-family: 'kisheader';
+    font-size: 30px;
+    text-align: center;
+}
+
+h4 {
+    font-family: 'bekezdesek';
+}
+
+p.tartalom {
+    font-family: 'bekezdesek';
+    font-style: italic;    
+    font-size: 20px;
+    text-align: justify;
+    text-indent: 1px;
+    }
+
+p.kérdés{
+    font-family: 'bekezdesek';
+    font-size: 20px;
+    font-style: italic;
+    font-weight: bold;
+    padding-left: 10px;
+    text-align: center;
+}
+
+p.valaszok {
+    font-family: 'bekezdesek';
+    font-size: 18px;
+    font-style: normal;
+    padding-left: 15px;
+    text-align: center;
+}
+
+p.gombok {
+    text-align: center;
+}    
+span.tipp {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+    article {
+        text-align: justify;
+        background-color: rgba(33, 131, 230, 0.6);
+        padding: 1% 2% 1% 2%;
+        margin: 1%;
+        width: 60%;
+    }
+
+    #images1 {
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        align-content: stretch;
+        padding-right: 30px;
+    }
+
+    #images2 {
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        align-content: stretch;
+    }
+
+    article.fej {
+        text-align: justify;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        background-color: rgba(101, 169, 238, 0.6);
+        padding: 1% 2% 1% 2%;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+    }
+
+    article.oktatas{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    article.teszt{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .button{
+        background-color: rgb(255, 255, 255);
+        font-family: sans-serif;
+        font-style: normal;
+        font-size: 15px;
+        margin-left: 5px;
+    }
+
+    figure {
+        width: 30%;
+        height: fit-content;
+        align-items: flex-start;
+        padding: 1% 2%;
+        background-color: rgb(49, 142, 185);
+        border-radius: 10px;
+        text-align: center;
+        margin: 1%;
+    }
+    
+    figcaption {
+        padding: 0%;
+    }
+    
+    img {
+        max-width: 100%;
+    }
+
+    ul.hegyek li {
+        list-style-image:url("Kepek/snowed-mountains.png");
+        line-height: 1.5em;
+        font-weight: 600;
+        font-style: italic;
+        font-family: sans-serif;
+        padding-right: 20px;
+    }
+
+
+.kep, article {
+        flex: 1 1 75%;
+        padding: 0px 8px;
+        border-radius: 15px;
+        background-color: rgba(131, 199, 255, 0.829);
+	    padding: 2%;
+	    margin: 1%;
+    }
+
+    figure {float: right;
+    margin: 5px;
+    position: relative;
+    top: 20px;}
+
+    
+    aside {
+        flex: 1 1 50%;
+        padding: 5px;
+        text-align: left;
+        font-size: 1.2em;
+        border-radius: 15px;
+    }
+
+    footer {
+        text-align: center;
+        font-size: 0.8em;
+        font-weight: 600;
+        font-style: italic;
+    }
+
+    
+    small {font-size: 12px;}
+
+    table {
+        text-align: justify;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+	    margin-right: auto;
+	    width: 100%;
+        border-collapse: collapse;
+        text-align: center;
+        vertical-align: middle;
+        background-color: rgb(81, 147, 223);
+        border: 1px dashed black;
+        padding: 6px;
+    }
+
+    /*OSZTÁLYOK*/
+
+    .urlap {
+        text-align: justify;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+	    margin-right: auto;
+        width: 70%;
+        text-align: center;
+    }
+
+    .validalo {
+        margin-left: auto;
+	    margin-right: auto;
+        justify-content: center;
+        text-align: left;
+        align-items: center;
+	    width: 70%;
+        border-collapse: collapse;
+        text-align: center;
+        background-color: rgb(25, 150, 207);
+        border: 3px solid black;
+        padding: 6px;
+    }
+    .validalo td {
+        text-align: left;
+    }
+
+    label.error {
+        color: #990c0c;
+        font-weight: bold;
+        font-family: sans-serif;
+    }
+
+    div#leiras{
+        margin-left: 20%;
+    }
+
+    .labjegyzek tr{
+        margin-left: auto;
+	    margin-right: auto;
+    }
+
+    td {
+        border: 1px solid black;
+        text-align: center;
+        vertical-align: middle;
+        padding: 5px;
+    }
+
+    table.teszt{
+        border-collapse: collapse;
+        margin-left: auto;
+	    margin-right: auto;
+        text-align: justify;
+        width: 100%;
+    }
+
+    img.terkep {
+        height: auto;
+        float: right;
+        margin-top: 8px;
+        margin-left: 15px;
+        margin-bottom: 5px;
+    }
+
+    h3.cikkcim {
+        display: table;
+        text-align: left;
+        font-size: 1.1em;
+        padding: 0px;
+    }
+
+    p.tartalom {
+        padding: 3px;
+        text-indent: 1.1em;
+        font-size: 0.8em;
+    }
+
+    /*MENÜK*/
+    nav {
+        border-radius: 10px;
+        background-color: #3b9ad1;
+        padding: 3px;
+        margin: 8px 0;
+    }
+    
+    nav ul{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        border: 1px solid rgb(13, 206, 240);
+        border-radius: 10px;
+        list-style-type: none;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0px;
+        margin: 0px;
+    }
+    
+    nav li a {
+        display: block;
+        font-size: 1em;
+        color: rgb(208, 241, 245);
+        padding: 10px;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+    }
+    
+    nav ul li a.current {
+        background-color: #2fb1b3;
+    }
+    
+    nav li a:hover {
+        background-color: #12b0b0;
+    }
+    /*Tablet*/
+    @media all and (min-width: 600px) {
+        
+        div.container{
+            flex-basis: 100%;
+            flex-direction:row;
+        }   
+        div.szekcio{
+            flex-direction: row;
+            flex-basis: 100%;
+        }
+        article {
+            flex-basis: 66.6%;
+        }
+        figure {
+            
+            flex-basis:33.3%;
+        }
+        aside {
+            flex-basis: 30%;
+        }
+        article#images1 {
+            flex-basis: 70%;}
+        article#images2 {
+            flex-basis: 70%;}
+        
+        table {
+            flex-basis: 60%;
+        }
+        form {
+            flex-basis: 75%
+        }
+        article{
+            flex-basis: 60%;
+        }
+        
+    }
+
+    /*Számítógép*/
+    @media all and (min-width: 768px) {
+        
+        nav ul{
+            flex-direction: row;
+        }
+        nav ul li{
+            flex-basis: 20%;
+        }
+    }

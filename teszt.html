@@ -1,0 +1,285 @@
+<!DOCTYPE HTML> 
+<HTML lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Erdélyi Noémi">
+<meta name="description" content="Corvinus Téli Sportolók Közössége">
+<link rel="stylesheet" href="style.css">
+<link rel="shortcut icon" href="Kepek/favicon.ico" type="image/x-icon">
+<title>Extrém-személyiség teszt</title> 
+<script>
+        let pont1;
+        let pont2;
+        let pont3;
+        let pont4;
+        let pont5;
+        let pont6;
+        let pont7;
+        let osszpont;
+
+    function kiertekel() {
+        pont1 = 0;
+        pont2 = 0;
+        pont3 = 0;
+        pont4 = 0;
+        pont5 = 0;
+        pont6 = 0;
+        pont7 = 0;
+        osszpont = 0;
+
+        const a = document.getElementById("kérdés1").selectedIndex;
+            if (a==0){pont1=pont1 + 1;}
+			if (a==1){pont1=pont1 + 1;}
+            if (a==2){pont1=pont1 + 2;}
+        
+        if (document.getElementById("kérdés2").value=="0-2") {pont2 = pont2 + 1;}
+        if (document.getElementById("kérdés2").value=="3-6") {pont2 = pont2 + 2;}
+        if (document.getElementById("kérdés2").value=="6+") {pont2 = pont2 + 3;}
+
+        if (document.getElementById("kék").checked) {pont3 = pont3 + 1;}
+        if (document.getElementById("piros").checked) {pont3 = pont3 + 2;}
+        if (document.getElementById("fekete").checked) {pont3 = pont3 + 3;}
+
+        //if (document.getElementById("0-2").checked) {pont4 =pont4 - 0;}
+        if (document.getElementById("3-6").checked) {pont4 = pont4 - 1;}
+        if (document.getElementById("7-10").checked) {pont4 = pont4 - 2;}
+        if (document.getElementById("10+").checked) {pont4 = pont4 - 3;}
+
+        if (document.getElementById("csúsznék").checked) {pont5 = pont5 + 2;}
+        if (document.getElementById("hüttében lennék").checked) {pont5 = pont5 + 1;}
+        
+        if (document.getElementById("8:00-8:30").checked) {pont6 = pont6 + 3;}
+        if (document.getElementById("9:00-9:30").checked) {pont6 = pont6 + 2;}
+        if (document.getElementById("10:00-10:30").checked) {pont6 = pont6 + 1;}
+
+        if (document.getElementById("csapatban").checked) {pont7 = pont7 + 2;}
+        //if (document.getElementById("egyedül").checked) {pont7 = pont7 + 0;}
+
+        osszpont = pont1 + pont2 + pont3 + pont4 + pont5 + pont6 + pont7; //max 15 pont lehet
+
+        //konzolra kiíratás
+        console.log("1.feladat pontjai: " + pont1);
+        console.log("2.feladat pontjai: " + pont2);
+        console.log("3.feladat pontjai: " + pont3);
+        console.log("4.feladat pontjai: " + pont4);
+        console.log("5.feladat pontjai: " + pont5);
+        console.log("6.feladat pontjai: " + pont6);
+        console.log("7.feladat pontjai: " + pont7);
+        console.log("osszpont:" + osszpont);
+
+        //teszteredmények 
+        if (osszpont >12) {alert("Összes megszerzett pontszám: " + osszpont + '.\n\nGratulálunk! A Te extrém-személyiségteszted eredménye: A havas extrémsportok vakmerő imádója!\n\nA pontok megtekintéséhez kattintson a "Pontozás leírása" gombra!');}
+
+        if (osszpont <=12 && osszpont>9) {alert("Összes megszerzett pontszám: " + osszpont + '.\n\nGratulálunk! A Te extrém-személyiségteszted eredménye: A havas extrémsportok stabil úttörője!\n\nA pontok megtekintéséhez kattintson a "Pontozás leírása" gombra!');}
+
+        if (osszpont <=9 && osszpont>6) {alert("Összes megszerzett pontszám: " + osszpont + '.\n\nGratulálunk! A Te extrém-személyiségteszted eredménye: A havas extrémsportok óvatos bölcse!\n\nA pontok megtekintéséhez kattintson a "Pontozás leírása" gombra!');}
+
+        if (osszpont <=6) {alert("Összes megszerzett pontszám: " + osszpont + '.\n\nGratulálunk! A Te extrém-személyiségteszted eredménye: A havas extrémsportok kitartó túlélője!\n\nA pontok megtekintéséhez kattintson a "Pontozás leírása" gombra!');}
+
+
+    }
+
+    function pontozas(){
+        pont1 = 0;
+        pont2 = 0;
+        pont3 = 0;
+        pont4 = 0;
+        pont5 = 0;
+        pont6 = 0;
+        pont7 = 0;
+        osszpont = 0;
+
+        const a = document.getElementById("kérdés1").selectedIndex;
+            if (a==0){pont1=pont1 + 1;}
+			if (a==1){pont1=pont1 + 1;}
+            if (a==2){pont1=pont1 + 2;}
+        
+        if (document.getElementById("kérdés2").value=="0-2") {pont2 = pont2 + 1;}
+        if (document.getElementById("kérdés2").value=="3-6") {pont2 = pont2 + 2;}
+        if (document.getElementById("kérdés2").value=="6+") {pont2 = pont2 + 3;}
+
+        if (document.getElementById("kék").checked) {pont3 = pont3 + 1;}
+        if (document.getElementById("piros").checked) {pont3 = pont3 + 2;}
+        if (document.getElementById("fekete").checked) {pont3 = pont3 + 3;}
+
+        //if (document.getElementById("0-2").checked) {pont4 =pont4 - 0;}
+        if (document.getElementById("3-6").checked) {pont4 = pont4 - 1;}
+        if (document.getElementById("7-10").checked) {pont4 = pont4 - 2;}
+        if (document.getElementById("10+").checked) {pont4 = pont4 - 3;}
+
+        if (document.getElementById("csúsznék").checked) {pont5 = pont5 + 2;}
+        if (document.getElementById("hüttében lennék").checked) {pont5 = pont5 + 1;}
+        
+        if (document.getElementById("8:00-8:30").checked) {pont6 = pont6 + 3;}
+        if (document.getElementById("9:00-9:30").checked) {pont6 = pont6 + 2;}
+        if (document.getElementById("10:00-10:30").checked) {pont6 = pont6 + 1;}
+
+        if (document.getElementById("csapatban").checked) {pont7 = pont7 + 2;}
+        //if (document.getElementById("egyedül").checked) {pont7 = pont7 + 0;}
+
+        osszpont = pont1 + pont2 + pont3 + pont4 + pont5 + pont6 + pont7; //max 15 pont lehet
+
+
+
+        let ponttabla = "<br> 1.feladatra járó pontszám: " + pont1 + ", mert ezt az opciót választottad: " + feladatListaPontozas("kérdés1")
+                        + "<br> 2.feladatra járó pontszám: " + pont2 + ", mert ezt az opciót választottad: " + feladatListaPontozas("kérdés2")
+                        + "<br> 3.feladatra járó pontszám: " + pont3 + ", mert ezt az opciót választottad: " + radioGombEredmeny("kérdés3") 
+                        + "<br> 4.feladatra járó pontszám: " + pont4 + ", mert ezt az opciót választottad: " + radioGombEredmeny("kérdés4")
+                        + "<br> 5.feladatra járó pontszám: " + pont5 + ", mert ezt az opciót választottad: " + radioGombEredmeny("kérdés5")
+                        + "<br> 6.feladatra járó pontszám: " + pont6 + ", mert ezt az opciót választottad: " + radioGombEredmeny("kérdés6")
+                        + "<br> 7.feladatra járó pontszám: " + pont7 + ", mert ezt az opciót választottad: " + radioGombEredmeny("kérdés7");
+                    
+        
+        //megkeressük a "leiras" id-val rendelkező div-et és hozzáadjuk a ponttabla szöveget
+        document.getElementById("leiras").innerHTML = ponttabla; 
+    }
+
+
+
+
+
+    //megadunk fv bemeneti paraméternek az adott kérdéshez tartozó radiogombokat, majd return-öljük a bejelölt válasz értékét, 3-7-es válaszokig működik radiokra
+    //kérdésX name-mel találunk meg adott radiogombokat
+    function radioGombEredmeny(radioGombName){
+        let radioGombok = document.getElementsByName(radioGombName); //a kérdésX névvel rendelkező rádiógombok megkeresése a for ciklushoz
+        
+        //csinál egy tömböt a name-ekből, azok lelemit indexeli és az i-edik elemének a value-ját adja vissza, egy csoportba tartozó elemeket rakja egy tömb-be aminek a lengthén megy végig
+        for(let i = 0; i < radioGombok.length; i++){
+            if(radioGombok[i].checked){
+                return radioGombok[i].value;
+            }
+            
+        }
+        return "";
+    }
+    //megadjuk bemeneti paraméternek egy lista id-ját, és visszaadjuk a kiválasztott listaelemet (1-2. kérdésnél)
+    function feladatListaPontozas(id){
+        let lista_id = document.getElementById(id);
+        let value = lista_id.options[lista_id.selectedIndex].value;
+            return value;
+    }
+    
+</script>
+</head> 
+<body>
+    <header>
+        <p>
+        <h1>Találkozz a síelés szerelmeseivel a Corvinus-on!</h1>
+        <h2>Figyelem! A weboldal a Corvinus egyetem hallgatóinak és dolgozóinak készült!</h2>
+        </p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Kezdőlap</a></li>
+            <li><a href="oktatas.html">Síoktatás</a></li>
+            <li><a class="active" href="#">Extrém-teszt</a></li>
+            <li><a href="galeria.html">Galéria</a></li>
+            <li><a href="regisztracio.html">Regisztráció</a></li>
+        </ul>
+    </nav>
+    <article class="urlap">
+        <form>
+
+            <p class="cim"><p><h3>Extrémsport-személyiségteszt</h3></p>
+           
+                <p class="kérdés">1. Melyik téli extrémsportot űzöd?</p>
+
+                <p class="valaszok"><select id="kérdés1">
+                <option value="síelés">Síelést</option>
+                <option value="snowboard">Snowboardot</option>
+                <option value="mindkettő">Mindkettőt</option>
+                </select></p>
+
+            
+                <p class="kérdés">2. Hány éve űzöd a sporto(ka)t?</p>
+                
+                    <p class="valaszok"><select id="kérdés2">
+                        
+                        <option value="0-2">0-2 éve</option>
+                        <option value="3-6">3-6 éve</option>
+                        <option value="6+">6+ éve</option>
+                    </select></p>
+                
+                <p class="kérdés">3. Melyik nehézségi szintű pályákat élvezed a legjobban?<br>
+                <p class="valaszok"><label><input type="radio" name="kérdés3" value="kék" id="kék">Kéket.</label>
+                <label><input type="radio" name="kérdés3" value="piros" id="piros">Pirosat.</label>
+                <label><input type="radio" name="kérdés3" value="fekete" id="fekete">Feketét.</label></p>
+            
+            
+                <p class="kérdés">4. Egy egyhetes utazás alatt szerinted átlagosan naponta hányat vagy képes esni a pályán?</p>
+                <p class="valaszok"><label><input type="radio" name="kérdés4" value="0-2" id="0-2">0-2 alkalommal.</label>
+                <label><input type="radio" name="kérdés4" value="3-6" id="3-6">3-6 alkalommal.</label>
+                <label><input type="radio" name="kérdés4" value="7-10" id="7-10">7-10 alkalommal.</label>
+                <label><input type="radio" name="kérdés4" value="10+" id="10+">10+ alkalommal.</label></p>
+                
+                <p class="kérdés">5. Egy hidegebb napon ugyanannyit csúsznál, mint általában vagy inkább élveznéd többet a hüttében lennék melegét?<br>
+                <p class="valaszok"><label><input type="radio" name="kérdés5" value="csúsznék" id="csúsznék">Ugyanúgy csúsznék, amennyit csak bírok.</label>
+                <label><input type="radio" name="kérdés5" value="hüttében lennék" id="hüttében lennék">Inkább több időt töltenék hüttében lennék másokkal.</label></p>
+                </p>
+
+                <p class="kérdés">6. Mikor lennél hajlandó legkorábban kimenni a pályára (szép időben)?<br>
+                    <p class="valaszok">
+                    <label><input type="radio" name="kérdés6" value="8:00-8:30" id="8:00-8:30">8:00-8:30 körül már sietnék ki csúszni.</label>
+                    <label><input type="radio" name="kérdés6" value="9:00-9:30" id="9:00-9:30">9:00-9:30 között, nem kapkodom el annyira az indulást.</label>
+                    <label><input type="radio" name="kérdés6" value="10:00-10:30" id="10:00-10:30">10:00-10:30 között, mert szeretek sokáig aludni.</label></p>
+                </p>
+
+                <p class="kérdés">7. Csapatban szeretsz csúszni vagy inkább a saját tempódat követnéd?<br>
+                <p class="valaszok">
+                <label><input type="radio" name="kérdés7" value="csapatban" id="csapatban">Csapatban a legjobb!</label>
+                <label><input type="radio" name="kérdés7" value="egyedül" id="egyedül">Inkább egyedül szeretek csúszni.</label></p>
+                </p>
+
+                <p class="gombok">
+                    <input class="button" type="submit" value="Elküldés" name="küld" onclick="kiertekel()">
+                    <input class="button" type="reset" value="Alaphelyzet" name="alap" onclick="location.reload()">
+                    <input class="button" type="button" value="Pontozás leírása" onclick="pontozas()">
+                </p>
+        </form>
+    </article>
+
+    <!--ponttábla helye-->      
+    <div id="leiras"></div>
+
+    <hr>
+
+    <article class="teszt">
+        <h3 class="teszt">A lehetséges személyiségtípusokról röviden</h3>
+        
+        <table class="teszt">
+            <tr>
+                <td><h4>A havas extrémsportok vakmerő imádója:</h4></td>
+                <td><p class="tartalom">Ez a személyiség megszállottja a téli extrémsportoknak, imádja a havat és a sebességet! Képes korábban kelni, hogy az elsők között érjen a pályára és zárásig annyit csússzon, amennyit csak lehet! Nem riad vissza a meredek fekete szakaszoktól vagy éppen egy hidegebb naptól! Hosszú évek tapasztalata van mögötte, imád magabiztosan száguldozni. Ha csapatban csúszik másokkal, szerencsésebb ugyanilyen tempójú egyénekkel tartania, mert nehezen fogja vissza az iramot!</p></td>
+            </tr>
+            <tr>
+                <td><h4>A havas extrémsportok stabil úttörője:</h4></td>
+                <td><p class="tartalom">Ez a személyiség egy fokkal visszafogottabb kevésbé megszállott módon, de ugyancsak magabiztosan teljesíti a pályákat. Előfordul, hogy pár esés becsúszik, de mindig hamar talpraáll és ez sosem veszi el a kedvét a meredekebb szakaszoktól. Ugyancsak több évnyi tapasztalat van a tudása mögött, de ehhez a tempóhoz mások már könnyebben tudnak alkalmazkodni, így a többség szívesen csúszik vele. Nem feltétlen törekszik elsőként a pályára érkezni, ezért inkább kevesebb időt tölt a hütte melegében.</p></td>
+            </tr>
+            <tr>
+                <td><h4>A havas extrémsportok óvatos bölcse:</h4></td>
+                <td><p class="tartalom">Ez a személyiség mégcsak pár év tapasztalattal rendelkezik, még alakítja a saját csúszási stílusát, és óvatosabban vág neki a keményebb kihívásoknak. Még óvatosabban csúszik a piros pályákon is és gyakran előfordul nála, hogy az átlagosnál többet esik, ezért némi félénkség állandóan jelen van benne. Nem kifejezetten bátorkodik rossz látási viszonyok között is ugyanúgy csúszni, a túl nagy hideget is valószínűleg nehezbben viseli. Saját képességeit reálisan felmérve a saját szintjével szeret együtt csúszni, akik igazodnak a lassabb tempóhoz és gyakran megállnak.</p></td>
+            </tr>
+            <tr>
+                <td><h4>A havas extrémsportok kitartó túlélője:</h4></td>
+                <td><p class="tartalom">Ez a személyiség mégcsak még sokkal valószínűbb, hogy az első éveit tölti a pályán, csúszása még elég bizonytalan, de a sok esés se szegi kedvét a gyakorlástól. Nála még gyakrabban előfordulhat, hogy csúszik az indulással és kevesebb időt tölt átlagosan a sípályán. Kedvenc terepe a biztos kék pályarendszer és szeret csapatban csúszni, hogy a nagyobb eséseknél ott legyen a segítség!</p></td>
+            </tr>
+        </table>
+        
+    </article>
+
+    <hr>
+
+    <footer>
+        <table class="labjegyzek">
+            <tr><p>Csatlakozz a Corvinus Téli Sportolók közösségéhez!<a target="_blank" href="https://www.facebook.com/groups/700069514298389"><br>
+                <img class="logo" src="Kepek/facebook.png" alt="Facebook"></a>
+            <a target="_blank" href=" https://whatsapp.com/dl/"> <img class="logo" src="Kepek/whatsapp.png" alt="WhatsApp"></a></p></tr>
+            <tr><p>Készítette: Erdélyi Noémi &copy; 2021.</p></tr>
+            </tr>
+        </table>
+    </footer>
+
+</body> 
+</HTML> 
